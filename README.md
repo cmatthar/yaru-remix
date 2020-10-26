@@ -3,18 +3,17 @@
 ### Yaru-remix
 Yaru-remix is a fork of [Yaru](https://github.com/ubuntu/yaru) theme.
 
-Yaru-remix includes:
-- GTK3 theme
+- GTK themes (gtk2, gtk3)
 - Gnome-Shell theme
+- Ubuntu-dock theme (indicators)
 - Yaru-remix icons
 - Yaru-remix wallpaper
 - [Yaru-remix-theme-toggle](https://github.com/Muqtxdir/yaru-remix-theme-toggle) extension
  
 *Note: Yaru-remix theme does not work with Snap apps*
 
-
-### Installation:
-If you would like to build from yaru-remix/20.04, please follow instructions from [here](install.md).
+### Installation for Ubuntu 20.04 (GNOME 3.36):
+If you would like to install for Ubuntu 20.04, please follow instructions from [here](install.md).
 
 ### Screenshots
 **Light:**

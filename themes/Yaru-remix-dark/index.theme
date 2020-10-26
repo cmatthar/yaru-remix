@@ -5,5 +5,5 @@ Comment=Ubuntu Yaru-remix-dark theme
 Encoding=UTF-8
 GtkTheme=Yaru-remix-dark
 IconTheme=Yaru-remix-dark
-
-
+CursorTheme=Yaru-remix-dark
+CursorSize=24
