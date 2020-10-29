@@ -2171,9 +2171,9 @@ StScrollBar {
     /* Running and focused application style */
     background-image: none; }
   #dashtodockContainer.running-dots .app-well-app.focused .overview-icon {
-    background-color: rgba(38, 38, 36, 0.4); }
+    background-color: rgba(128, 128, 126, 0.4); }
   #dashtodockContainer.dashtodock .app-well-app.focused .overview-icon {
-    background-color: rgba(38, 38, 36, 0.2); }
+    background-color: rgba(128, 128, 126, 0.2); }
   #dashtodockContainer.dashtodock #dash {
     background: rgba(255, 255, 255, 0.777); }
   #dashtodockContainer.dummy-opaque {
