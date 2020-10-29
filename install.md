@@ -32,6 +32,11 @@ cd yaru-remix
 ```
 
 ```bash
+# switch branch to yaru-remix/20.10
+git switch yaru-remix/20.10
+```
+
+```bash
 # Initialize build system (only required once per repo)
 meson build
 

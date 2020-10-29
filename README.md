@@ -7,6 +7,7 @@ Yaru-remix includes:
 - Gnome-Shell theme
 - Ubuntu-dock theme (indicators)
 - Yaru-remix icons
+- Yaru-remix cursors
 - Yaru-remix wallpaper
 - [Yaru-remix-theme-toggle](https://github.com/Muqtxdir/yaru-remix-theme-toggle) extension
  
