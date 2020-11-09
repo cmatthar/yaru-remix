@@ -2841,9 +2841,9 @@ treeview ~ scrollbar.vertical {
 
   &:checked {
     color: $selected_fg_color;
-    border-color: $checkradio_borders_color;
-    background-color: $checkradio_bg_color;
-    text-shadow: 0 1px transparentize($selected_borders_color, 0.5),
+    border-color: $suggested_border_color;
+    background-color: $suggested_bg_color;
+    text-shadow: 0 1px transparentize($suggested_border_color, 0.5),
                  0 0 2px transparentize(white, 0.4);
   }
 
@@ -2864,9 +2864,9 @@ treeview ~ scrollbar.vertical {
 
     &:checked {
       @if $variant == 'light' { color: $white; }
-      border-color: if($variant == 'light', $checkradio_borders_color,
-                                            $selected_borders_color);
-      background-color: $checkradio_bg_color;
+      border-color: if($variant == 'light', $suggested_bg_color,
+                                            $suggested_border_color);
+      background-color: $suggested_bg_color;
     }
 
     &:disabled {
@@ -2903,7 +2903,7 @@ treeview ~ scrollbar.vertical {
     
   }
 
-  &:checked > slider { border: 1px solid $checkradio_borders_color; }
+  &:checked > slider { border: 1px solid $suggested_border_color; }
 
   &:disabled slider { @include button(insensitive); }
 
@@ -2916,19 +2916,20 @@ treeview ~ scrollbar.vertical {
     }
     }
 
-    &:checked > slider { border-color: $checkradio_borders_color; }
+    &:checked slider { border-color: if($variant == 'light', $suggested_bg_color, $suggested_border_color); }
 
     &:disabled slider { @include button(backdrop-insensitive); }
   }
 
+
   row:selected & {
     @if $variant == 'light' {
       box-shadow: none;
-      border-color: $checkradio_borders_color;
+      border-color: $selected_borders_color;
 
-      &:backdrop { border-color: $checkradio_borders_color; }
+      &:backdrop { border-color: $selected_borders_color; }
 
-      > slider { &:checked, & { border-color: $checkradio_borders_color; } }
+      > slider { &:checked, & { border-color: $selected_borders_color; } }
     }
   }
 
