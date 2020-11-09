@@ -2825,21 +2825,25 @@ treeview ~ scrollbar.vertical {
 /**********
  * Switch *
  **********/
-switch {
-  outline-offset: -4px;
+ 
+ switch {
+  outline-offset: 0;
 
   // similar to the .scale
   border: 1px solid $borders_color;
-  border-radius: 14px;
-  color: $fg_color;
-  background-color: $dark_fill;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  color: transparent;
+  @if $variant == 'light' { background-color: #dedede; }
+  @else {background-color: #808080; }
   text-shadow: 0 1px transparentize(black, 0.9);
 
   &:checked {
     color: $selected_fg_color;
-    border-color: $suggested_border_color;
-    background-color: $suggested_bg_color;
-    text-shadow: 0 1px transparentize($suggested_border_color, 0.5),
+    border-color: $checkradio_borders_color;
+    background-color: $checkradio_bg_color;
+    text-shadow: 0 1px transparentize($selected_borders_color, 0.5),
                  0 0 2px transparentize(white, 0.4);
   }
 
@@ -2853,14 +2857,16 @@ switch {
   &:backdrop {
     color: $backdrop_fg_color;
     border-color: $backdrop_borders_color;
-    background-color: $backdrop_dark_fill;
+    @if $variant == 'light' { background-color: #dedede; }
+  @else {background-color: #808080; }
     text-shadow: none;
     transition: $backdrop_transition;
 
     &:checked {
-      @if $variant == 'light' { color: $backdrop_bg_color; }
-      border-color: if($variant=='light', $suggested_bg_color, $suggested_border_color);
-      background-color: $suggested_bg_color;
+      @if $variant == 'light' { color: $white; }
+      border-color: if($variant == 'light', $checkradio_borders_color,
+                                            $selected_borders_color);
+      background-color: $checkradio_bg_color;
     }
 
     &:disabled {
@@ -2871,34 +2877,33 @@ switch {
   }
 
   slider {
-    margin: -1px;
-    min-width: 24px;
-    min-height: 24px;
+    background-color: white;
+    background-clip: if($variant == "light", border-box, padding-box);
+    margin: 2px;
+    min-width: 16px;
+    min-height: 16px;
     border: 1px solid;
-    border-radius: 50%;
+    outline-offset: -2px;
+    border-radius: 4px;
     transition: $button_transition;
     -gtk-outline-radius: 20px;
 
     @if $variant == 'light' {
       @include button(normal-alt, $edge: $shadow_color);
-    }
-    @else {
-      @include button(normal-alt, $c: lighten($bg_color,6%), $edge: $shadow_color);
-    }
+    } 
+    
   }
-
+  
   image { color: transparent; } /* only show i / o for the accessible theme */
 
   &:hover slider {
     @if $variant == 'light' {
       @include button(hover-alt, $edge: $shadow_color);
     }
-    @else {
-      @include button(hover-alt, $c: lighten($bg_color,6%), $edge: $shadow_color);
-    }
+    
   }
 
-  &:checked slider { border: 1px solid $suggested_border_color; }
+  &:checked > slider { border: 1px solid $checkradio_borders_color; }
 
   &:disabled slider { @include button(insensitive); }
 
@@ -2906,10 +2911,12 @@ switch {
     slider {
       transition: $backdrop_transition;
 
-      @include button(backdrop);
+      @if $variant == 'light' {
+      @include button(hover-alt, $edge: $shadow_color);
+    }
     }
 
-    &:checked slider { border-color: if($variant == 'light', $suggested_bg_color, $suggested_border_color); }
+    &:checked > slider { border-color: $checkradio_borders_color; }
 
     &:disabled slider { @include button(backdrop-insensitive); }
   }
@@ -2917,15 +2924,16 @@ switch {
   row:selected & {
     @if $variant == 'light' {
       box-shadow: none;
-      border-color: $selected_borders_color;
+      border-color: $checkradio_borders_color;
 
-      &:backdrop { border-color: $selected_borders_color; }
+      &:backdrop { border-color: $checkradio_borders_color; }
 
-      slider { &:checked, & { border-color: $selected_borders_color; } }
+      > slider { &:checked, & { border-color: $checkradio_borders_color; } }
     }
   }
 
 }
+
 
 
 /*************************

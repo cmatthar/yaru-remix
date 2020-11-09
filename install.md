@@ -28,6 +28,11 @@ git clone https://github.com/Muqtxdir/yaru-remix.git
 ```
 
 ```bash
+# switch to yaru-remix/18.04
+git checkout yaru-remix/18.04
+```
+
+```bash
 cd yaru-remix
 ```
 
