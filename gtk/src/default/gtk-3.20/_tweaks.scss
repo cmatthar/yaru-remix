@@ -253,7 +253,7 @@ switch {
   }
 
   slider {
-    @if $variant == 'dark' {
+    @if $variant == 'light' {
       @include button(normal-alt, $c: $bg_color, $edge: $shadow_color);
     }
   }
