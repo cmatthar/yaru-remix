@@ -4,8 +4,15 @@ project('Yaru-remix',
         license : ['GPL3', 'CC BY-SA 4.0'],
         default_options: ['prefix=/usr'])
 
-subdir('themes')
-subdir('icons')
-subdir('gresource')
+components = ['icons', 'gnome-shell', 'gresource', 'gtk']
 
+foreach component: components
+  if not get_option(component)
+    message('skip component ' + component)
+    continue
+  endif
 
+  message('build component ' + component)
+  subdir(component)
+
+endforeach
