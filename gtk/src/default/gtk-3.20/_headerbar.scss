@@ -233,8 +233,33 @@ headerbar,
       border-color: $_button_border_color;
       background-color: $checkradio_bg_color;
     }
-  }  
+  }
+  
 
+  // re-insert the full selection mode section from common ...
+  .selection-mode &,
+  &.selection-mode {
+    $_hc: mix($top_hilight, $suggested_bg_color, 50%); // hilight color
+
+    color: $selected_fg_color;
+    border-color: $suggested_border_color;
+
+    @include headerbar_fill($suggested_bg_color, $_hc);
+
+    separator {
+      background: image(lighten($suggested_bg_color, 5%));
+    }
+
+    &:backdrop {
+      background-color: $suggested_bg_color;
+      background-image: none;
+      box-shadow: inset 0 1px mix($top_hilight, $suggested_bg_color, 60%);
+
+      label {
+        text-shadow: none;
+        color: $selected_fg_color;
+      }
+    }
 
     .subtitle:link { @extend %link_selected; }
 
