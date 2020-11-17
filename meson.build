@@ -5,7 +5,7 @@ project('Yaru-remix',
         default_options: ['prefix=/usr'])
 
 
-components = ['icons', 'gnome-shell', 'gtk']
+components = ['icons', 'gnome-shell', 'gtk', 'wallpapers']
 
 foreach component: components
   if get_option(component)
