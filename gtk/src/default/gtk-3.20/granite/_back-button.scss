@@ -31,6 +31,9 @@ button.back-button.text-button {
     
     &:hover {
       @include button(hover, lighten($headerbar_bg_color, 8%), $headerbar_fg_color);
+      background-color: if($ambiance, $_headerbar_button_bg, $bg_color);
+      border-color: if($ambiance, $_border_color, $borders_color);
+      color: if($ambiance, $bg_color, $fg_color);
       background-image: -gtk-icontheme('go-previous-symbolic');
       background-repeat: no-repeat no-repeat;
       background-position: 5px 50%;
