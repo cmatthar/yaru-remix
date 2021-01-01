@@ -19,6 +19,7 @@ gtk3_scss_dependencies = [
   '_drawing.scss',
   '_tweaks.scss',
   '_headerbar.scss',
+  'granite/_granite.scss',
 ]
 
 gtk3_assets = [
