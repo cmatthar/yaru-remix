@@ -91,6 +91,7 @@ software-properties.png software-properties-gtk.png
 software-store.png software-center.png
 software-store.png softwarecenter.png
 software-store.png ubuntusoftware.png
+software-store.png pop-shop.png
 software-updater.png system-software-update.png
 software-updater.png update-manager.png
 sudoku-app.png gnome-sudoku.png
@@ -115,6 +116,7 @@ tweaks-app.png org.gnome.tweaks.png
 tweaks-app.png org.gnome.Tweaks.png
 usage-app.png gnome-usage.png
 usage-app.png org.gnome.Usage.png
+usb-creator-gtk.png com.system76.Popsicle.png
 weather-app.png gnome-weather.png
 weather-app.png org.gnome.Weather.Application.png
 weather-app.png org.gnome.Weather.png
