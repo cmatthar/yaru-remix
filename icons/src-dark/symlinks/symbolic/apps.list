@@ -95,6 +95,7 @@ software-store-symbolic.svg gnome-software-symbolic.svg
 software-store-symbolic.svg org.gnome.Software-symbolic.svg
 software-store-symbolic.svg software-center-symbolic.svg
 software-store-symbolic.svg softwarecenter-symbolic.svg
+software-store-symbolic.svg pop-shop-symbolic.svg
 software-store-symbolic.svg ubuntusoftware-symbolic.svg
 software-store-symbolic.svg snap-store-symbolic.svg
 software-updater-symbolic.svg system-software-update-symbolic.svg
@@ -122,6 +123,7 @@ tweaks-app-symbolic.svg org.gnome.tweaks-symbolic.svg
 tweaks-app-symbolic.svg org.gnome.Tweaks-symbolic.svg
 usage-app-symbolic.svg gnome-usage-symbolic.svg
 usage-app-symbolic.svg org.gnome.Usage-symbolic.svg
+usb-creator-gtk-symbolic.svg com.system76.Popsicle-symbolic.svg
 weather-app-symbolic.svg gnome-weather-symbolic.svg
 weather-app-symbolic.svg org.gnome.Weather.Application-symbolic.svg
 weather-app-symbolic.svg org.gnome.Weather-symbolic.svg
